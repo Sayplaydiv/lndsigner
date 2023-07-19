@@ -621,9 +621,9 @@ func (b *backend) newNode(ctx context.Context, storage logical.Storage,
 
 func GetNet(strNet string) (*chaincfg.Params, error) {
 	switch strNet {
-	/*case "mainnet":
-	return &chaincfg.MainNetParams, nil
-	*/
+	case "mainnet":
+		return &chaincfg.MainNetParams, nil
+
 	case "testnet", "testnet3":
 		return &chaincfg.TestNet3Params, nil
 

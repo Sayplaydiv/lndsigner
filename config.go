@@ -63,7 +63,7 @@ type Config struct {
 	RawRPCListeners []string `long:"rpclisten" description:"Add an interface/port/socket to listen for RPC connections"`
 	RPCListeners    []net.Addr
 
-	Network string `long:"network" description:"The network for which the node was created in the vault. One of: 'testnet', 'simnet', 'regtest', 'signet'"`
+	Network string `long:"network" description:"The network for which the node was created in the vault. One of: 'testnet', 'simnet', 'regtest', 'signet','mainnet'"`
 
 	// ActiveNetParams contains parameters of the target chain.
 	ActiveNetParams chaincfg.Params
@@ -79,7 +79,7 @@ func DefaultConfig() Config {
 		ConfigFile:  DefaultConfigFile,
 		TLSCertPath: defaultTLSCertPath,
 		TLSKeyPath:  defaultTLSKeyPath,
-		Network:     "regtest",
+		Network:     "mainnet",
 	}
 }
 
